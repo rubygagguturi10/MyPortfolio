@@ -1,0 +1,418 @@
+/* General styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.nav-left .nav-name {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-right {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-right li {
+    margin-left: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.nav-link:hover,.nav-link.active {
+    background-color: #e83e8c;
+}
+
+/* Home Section */
+#home {
+    background: url('C:/Users/rubyg/Downloads/FSD LAB/Ex-1/MyPortfolio/WhatsApp Image 2024-04-15 at 19.18.51_f1ab452e.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 100px 20px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.home-content {
+    max-width: 600px;
+    color: white;
+    margin-left: 20px;
+}
+
+.intro-text h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.intro-text h2 {
+    font-size: 3em;
+    margin: 0;
+    color: pink;
+    overflow: hidden; /* Ensures the animation is clipped */
+    white-space: nowrap; /* Keeps the text on one line */
+    border-right: .15em solid white; /* Creates the cursor effect */
+    animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+/* Typing Animation */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+}
+
+/* Portfolio Button */
+.portfolio-btn {
+    background: #e83e8c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.portfolio-btn:hover {
+    background: #c8235c;
+}
+
+
+/* About Section */
+#about {
+    padding: 2em;
+    background-color: #fbe8e8; /* Light pink background */
+    text-align: center; /* Center the title */
+}
+
+.about-content {
+    background: #fff;
+    border-radius: 8px;
+    padding: 2em;
+    margin: 1em auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #f06292; /* Pink border */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+}
+
+.about-inner {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.about-pic-container {
+    position: relative;
+    overflow: hidden;
+    width: 400px; /* Increase the width */
+    height: 500px; /* Increase the height */
+    margin-bottom: 1em;
+    border-radius: 8px;
+}
+
+.about-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.about-pic-container:hover .about-pic {
+    transform: scale(1.1);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.intro-text {
+    font-size: 1.5em;
+    color: #f06292; /* Pink */
+    margin: 0;
+    align-items: start;
+}
+
+.name-text {
+    font-size: 1.25em;
+    color: black; /* Black */
+    margin: 0.5em 0;
+}
+
+.resume-btn {
+    background: #f06292; /* Pink */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+.resume-btn i {
+    margin-right: 8px;
+}
+
+.resume-btn:hover {
+    background: #d54e7c; /* Darker pink */
+}
+
+.about-title {
+    font-size: 2.5em;
+    color: #f06292; /* Pink */
+    margin-bottom: 20px;
+    text-align: center; /* Center align the title */
+}
+
+/* Skills Section */
+#skills {
+    padding: 2em;
+    background-color: #fbe8e8; /* Light pink background */
+    text-align: center;
+}
+
+.skills-content {
+    background: #fff;
+    border-radius: 8px;
+    padding: 2em;
+    margin: 1em auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #f06292; /* Pink border */
+}
+
+.skills-content h2 {
+    margin-bottom: 1em;
+    color: #f06292; /* Pink color for the heading */
+}
+
+.skills-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skills-content ul li {
+    background: #f06292; /* Pink background for skills */
+    color: white;
+    padding: 0.5em 1em;
+    margin: 0.5em;
+    border-radius: 20px;
+}
+
+/* Education Section */
+#education {
+    padding: 2em;
+    background-color: #fbe8e8; /* Light pink background */
+    text-align: center;
+}
+
+.education-content {
+    background: #fff;
+    border-radius: 8px;
+    padding: 2em;
+    margin: 1em auto;
+    max-width: 1000px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #f06292; /* Pink border */
+}
+
+.education-content h2 {
+    margin-bottom: 1em;
+    color: #f06292; /* Pink color for the heading */
+}
+
+.education-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between cards */
+}
+
+.education-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5em;
+    margin: 0.5em;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f06292; /* Pink border */
+    text-align: left; /* Align text to the left */
+}
+
+.education-card p {
+    margin: 0.5em 0;
+    color: #333; /* Darker text color for contrast */
+    font-size: 1em; /* Adjust font size for readability */
+}
+
+.education-card strong {
+    color: #f06292; /* Pink color for emphasis */
+}
+
+
+/* Projects Section */
+#projects {
+    padding: 100px 20px;
+    background-color: #fbe8e8; /* Light pink background */
+}
+
+.projects-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.projects-content h2 {
+    font-size: 30px;
+    margin-bottom: 1rem;
+    color: #f06292; /* Pink color for heading */
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.project-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f06292; /* Pink color for the box */
+    height: 500px;
+    border-radius: 3rem;
+    cursor: pointer;
+    border: 5px solid transparent;
+    transition: 0.4s ease-in-out;
+    color: #fff; /* White text color for better readability */
+}
+
+.project-box:hover {
+    background-color: #333; /* Dark color on hover */
+    color: #f06292; /* Pink text color on hover */
+    border: 5px solid #f06292; /* Pink border on hover */
+    transform: scale(1.03);
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+}
+
+.project-info i {
+    font-size: 4rem;
+    color: #333; /* Dark color for icons */
+}
+
+.project-info h4 {
+    font-size: 2rem;
+    margin: 2rem 0;
+    font-weight: 800;
+    color: #333; /* Dark color for headings */
+}
+
+.project-info p {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.7;
+    color: #333; /* Dark color for text */
+}
+
+/* Contact Section */
+#contact {
+    padding: 2em;
+    background-color: #fbe8e8; /* Light pink background */
+    text-align: center;
+}
+
+.contact-content {
+    background: #fff;
+    border-radius: 8px;
+    padding: 2em;
+    margin: 1em auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #f06292; /* Pink border */
+}
+
+.contact-content h2 {
+    margin-bottom: 1em;
+    color: #f06292; /* Pink color for heading */
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.contact-icon {
+    color: #333;
+    text-decoration: none;
+    font-size: 2em;
+    transition: color 0.3s;
+}
+
+.contact-icon:hover {
+    color: #f06292; /* Pink color on hover */
+}
+
+/* Scroll-to-Top Button */
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #f06292; /* Pink background */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 1.5em;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-top:hover {
+    background: #c8235c; /* Darker pink on hover */
+}
